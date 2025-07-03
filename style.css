@@ -1,0 +1,149 @@
+/* Reset and base */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+font-family: 'Poppins', sans-serif;
+  background: linear-gradient(to bottom, #E0F7FA, #B2EBF2);
+  color: #00363A;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Header */
+header {
+  background: #00BCD4;
+  color: #ffffff;
+  text-shadow: 0 0 6px #ffffff88;
+  padding: 28px 20px;
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: 900;
+  box-shadow: 0 2px 12px rgba(255, 182, 193, 0.3);
+}
+
+/* Gallery Row */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 24px;
+  padding: 80px 20px 40px; /* <-- added top padding */
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+
+/* Each Image Card */
+.gallery-item {
+  background: #ffffff;
+  color: #004D40;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.25);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.gallery-item:hover {
+  transform: scale(1.2);
+  box-shadow: 0 18px 36px rgba(212, 0, 205, 0.749);
+}
+
+/* Label above image */
+.image-label {
+  text-align: center;
+  font-size: 1.2rem;
+  padding: 12px;
+  font-weight: bold;
+    background: #00BCD4;
+  color: #ffffff;
+  border-top-left-radius: 16px;
+  border-top-right-radius: 16px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* Image Styling */
+.gallery-item img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  transition: transform 0.4s ease-in-out;
+}
+
+.gallery-item:hover img {
+  transform: scale(1.05);
+  cursor: pointer;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .gallery-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .gallery-item img {
+    height: 150px;
+    
+  }
+
+  .image-label {
+    font-size: 1rem;
+  }
+}
+
+
+.lightbox {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.85);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.lightbox.hidden {
+  display: none;
+}
+
+.lightbox-content {
+  max-width: 90%;
+  max-height: 80%;
+  border-radius: 12px;
+  box-shadow: 0 0 20px #fff;
+}
+
+.nav-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 2rem;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  background: #FFF3E0;
+  color: #FF6F61;
+  border-radius: 50%;
+  z-index: 1001;
+}
+
+.prev { left: 5%; }
+.next { right: 5%; }
+
+.close {
+  position: absolute;
+  top: 5%;
+  right: 5%;
+  font-size: 2.5rem;
+  color: #fff;
+  cursor: pointer;
+}

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Modern Image Gallery</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+  <!-- Header -->
+  <header>
+    <h1>Modern Image Gallery</h1>
+  </header>
+
+  <!-- Image Row Section -->
+  <main>
+    <section class="gallery-grid">
+      <div class="gallery-item">
+        <h2 class="image-label">Mountain</h2>
+        <img
+          src="https://hips.hearstapps.com/hmg-prod/images/alpe-di-siusi-sunrise-with-sassolungo-or-langkofel-royalty-free-image-1623254127.jpg"
+          alt="Mountain">
+      </div>
+      <div class="gallery-item">
+        <h2 class="image-label">River</h2>
+        <img src="https://thumbs.dreamstime.com/b/landscape-mountains-trees-river-front-30280444.jpg" alt="River">
+      </div>
+      <div class="gallery-item">
+        <h2 class="image-label">Desert</h2>
+        <img src="https://c.ndtvimg.com/2023-05/a5ljm0o_deserts_625x300_24_May_23.jpg" alt="Desert">
+      </div>
+      <div class="gallery-item">
+        <h2 class="image-label">Forest</h2>
+        <img src="https://static.toiimg.com/photo/msid-107742404,width-96,height-65.cms" alt="Forest">
+      </div>
+
+      <!-- Lightbox Modal -->
+      <div id="lightbox-modal" class="lightbox hidden">
+        <span id="closeBtn" class="close">&times;</span>
+        <img id="lightbox-image" class="lightbox-content" src="" alt="Lightbox Image" />
+        <button id="prevBtn" class="nav-btn prev">&lt;</button>
+        <button id="nextBtn" class="nav-btn next">&gt;</button>
+      </div>
+
+      <script src="gallery.js"></script>
+
+    </section>
+  </main>
+
+</body>
+
+</html>
