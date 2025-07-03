@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Personal Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+  <link rel="stylesheet" href="portfolio.css">
+
+</head>
+
+<body>
+  <header role="banner">
+    <nav aria-label="Primary navigation">
+      <div class="logo" tabindex="0">Portfolio</div>
+      <ul class="nav-links" role="menubar">
+        <li role="none"><a href="#about" class="nav-link" aria-current="page" role="menuitem">About</a></li>
+        <li role="none"><a href="#projects" class="nav-link" role="menuitem">Projects</a></li>
+        <li role="none"><a href="#resume" class="nav-link" role="menuitem">Resume</a></li>
+        <li role="none"><a href="#contact" class="nav-link" role="menuitem">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section id="about" tabindex="-1" aria-labelledby="about-title" role="region">
+      <h2 id="about-title" class="section-title">About Me</h2>
+      <div class="about">
+        <div class="about-image-container">
+          <img src="https://iili.io/FTnlBwb.png">
+        </div>
+        <div class="about-content">
+          <p>Hello! I'm Sachin Gariya, a passionate software engineer and web developer skilled in building modern,
+            responsive, and accessible web applications. I specialize in HTML, CSS, JavaScript and frontend design,
+            delivering clean, performant, and user-friendly solutions.</p>
+          <div>
+            <strong>Skills:</strong>
+            <div class="skills-list" aria-label="List of skills">
+              <span class="skill">JavaScript</span>
+              <span class="skill">HTML &amp; CSS</span>
+              <span class="skill">Responsive Design</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects" tabindex="-1" aria-labelledby="projects-title" role="region">
+      <h2 id="projects-title" class="section-title">Projects</h2>
+      <div class="projects-grid" role="list">
+        <article class="project-card" role="listitem" tabindex="0" aria-label="Netflix Clone">
+          <img
+            src="https://media2.dev.to/dynamic/image/width=1280,height=720,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fd2db0bvcss75exc5es3d.png"
+            alt="Netflix homepage clone screenshot" class="project-image" />
+          <h3 class="project-title">Netflix Clone</h3>
+          <p class="project-description">A responsive Netflix landing page clone built using pure HTML and CSS,
+            replicating the original layout and styling.</p>
+
+        </article>
+
+        <article class="project-card" role="listitem" tabindex="0" aria-label="YouTube Clone">
+          <img src="https://www.figma.com/community/resource/e2d59ad1-4ee3-4de0-bd50-f03a873c6567/thumbnail"
+            alt="YouTube homepage clone screenshot" class="project-image" />
+          <h3 class="project-title">YouTube Clone</h3>
+          <p class="project-description">A basic HTML/CSS clone of YouTube’s homepage with responsive layout and video
+            card design.</p>
+
+        </article>
+
+        <article class="project-card" role="listitem" tabindex="0" aria-label="Amazon Product Page Clone">
+          <img src="https://codewithcurious.com/wp-content/uploads/2024/02/output-3-1024x603.png.webp"
+            alt="Amazon product page clone screenshot" class="project-image" />
+          <h3 class="project-title">Amazon Product Page Clone</h3>
+          <p class="project-description">Replicated the look and feel of an Amazon product page using only HTML and CSS
+            for layout and styling.</p>
+
+        </article>
+      </div>
+    </section>
+
+
+    <section id="resume" tabindex="-1" aria-labelledby="resume-title" role="region">
+      <h2 id="resume-title" class="section-title">Resume</h2>
+      <div class="resume-section" role="region" aria-live="polite" aria-atomic="true">
+        <div class="resume-item" tabindex="0">
+          <h3>HTML/CSS Developer</h3>
+          <div class="period">Jan 2023 – Present</div>
+          <p>Developed modern web pages using HTML and CSS with a strong emphasis on responsiveness and browser
+            compatibility. Translated design mockups into functional code. Maintained design consistency across
+            different pages, and collaborated closely with designers to ensure accurate implementation.</p>
+        </div>
+        <div class="resume-item" tabindex="0">
+          <h3>Landing Page Developer</h3>
+          <div class="period">Jun 2023 – Present</div>
+          <p>Designed and built responsive user interfaces using HTML5 and CSS3. Focused on clean, semantic markup and
+            modular CSS architecture. Enhanced UI/UX through pixel-perfect implementation and interactive layouts.
+            Created accessible, mobile-friendly landing pages with optimized performance.</p>
+        </div>
+        <div class="resume-item" tabindex="0">
+          <h3>Bachelor of Technology, Computer Science</h3>
+          <div class="period">2023 – 27</div>
+          <p>Dev Bhoomi Uttarakhand University – focusing on software development, algorithms, and system design.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" tabindex="-1" aria-labelledby="contact-title" role="region">
+      <h2 id="contact-title" class="section-title">Contact</h2>
+      <div class="contact-container" role="region" aria-live="polite" aria-atomic="true">
+        <form class="contact-form" action="#" method="post">
+          <div>
+            <label for="name">Name</label>
+            <input id="name" name="name" type="text" placeholder="Your full name" required autocomplete="name" />
+          </div>
+          <div>
+            <label for="email">Email</label>
+            <input id="email" name="email" type="email" placeholder="you@example.com" required autocomplete="email" />
+          </div>
+          <div>
+            <label for="message">Message</label>
+            <textarea id="message" name="message" placeholder="Write your message here" required></textarea>
+          </div>
+          <button type="submit" class="btn-submit" aria-label="Send contact message">Send Message</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer role="contentinfo">
+    <p>&copy; 2024 Sachin Gariya. All rights reserved.</p>
+  </footer>
+
+  <script>
+    // Highlight active nav link on scroll
+    const sections = document.querySelectorAll('section');
+    const navLinks = document.querySelectorAll('.nav-links a');
+
+    function onScroll() {
+      let scrollPos = window.scrollY + window.innerHeight / 4;
+
+      sections.forEach((section) => {
+        if (scrollPos >= section.offsetTop && scrollPos < section.offsetTop + section.offsetHeight) {
+          navLinks.forEach((link) => {
+            link.classList.remove('active');
+            if (link.getAttribute('href') === '#' + section.id) {
+              link.classList.add('active');
+            }
+          });
+        }
+      });
+    }
+
+    window.addEventListener('scroll', onScroll);
+
+    document.querySelectorAll('.nav-links a').forEach((anchor) => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const targetId = this.getAttribute('href').substring(1);
+        const targetSection = document.getElementById(targetId);
+        if (targetSection) {
+          window.scrollTo({
+            top: targetSection.offsetTop - 80,
+            behavior: 'smooth'
+          });
+        }
+      });
+    });
+
+    const form = document.querySelector('.contact-form');
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+      alert('Thank you for your message! This demo does not send messages.');
+      form.reset();
+    });
+  </script>
+</body>
+
+</html>
