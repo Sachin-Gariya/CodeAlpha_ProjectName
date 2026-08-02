@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mini Social Media</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+
+<header>
+    <div class="logo">
+        <i class="fa-solid fa-comments"></i>
+        MiniSocial
+    </div>
+
+    <div class="search">
+        <input type="text" placeholder="Search...">
+    </div>
+
+    <div class="profile">
+        <img src="https://i.pravatar.cc/50?img=5" alt="">
+    </div>
+</header>
+
+<div class="container">
+
+    <!-- Left Sidebar -->
+
+    <aside class="left-sidebar">
+
+        <div class="profile-card">
+            <img src="https://i.pravatar.cc/120?img=5">
+            <h2>John Doe</h2>
+            <p>Web Developer</p>
+        </div>
+
+        <ul class="menu">
+            <li><i class="fa-solid fa-house"></i> Home</li>
+            <li><i class="fa-solid fa-user-group"></i> Friends</li>
+            <li><i class="fa-solid fa-image"></i> Photos</li>
+            <li><i class="fa-solid fa-video"></i> Videos</li>
+            <li><i class="fa-solid fa-bookmark"></i> Saved</li>
+        </ul>
+
+    </aside>
+
+    <!-- Feed -->
+
+    <main>
+
+        <div class="create-post">
+
+            <textarea id="postInput" placeholder="What's on your mind?"></textarea>
+
+            <button onclick="createPost()">
+                Post
+            </button>
+
+        </div>
+
+        <div id="posts">
+
+            <div class="post">
+
+                <div class="post-header">
+                    <img src="https://i.pravatar.cc/60?img=10">
+
+                    <div>
+                        <h3>Emma</h3>
+                        <small>2 hours ago</small>
+                    </div>
+
+                </div>
+
+                <p>
+                    Welcome to Mini Social Media App ❤️
+                </p>
+
+                <img src="https://picsum.photos/700/350">
+
+                <div class="actions">
+
+                    <button onclick="likePost(this)">
+                        ❤️ <span>0</span>
+                    </button>
+
+                    <button>
+                        💬 Comment
+                    </button>
+
+                    <button>
+                        ↗ Share
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </main>
+
+    <!-- Right Sidebar -->
+
+    <aside class="right-sidebar">
+
+        <h3>Suggestions</h3>
+
+        <div class="friend">
+
+            <img src="https://i.pravatar.cc/45?img=18">
+
+            <div>
+                <h4>Alex</h4>
+                <button>Follow</button>
+            </div>
+
+        </div>
+
+        <div class="friend">
+
+            <img src="https://i.pravatar.cc/45?img=21">
+
+            <div>
+                <h4>Sophia</h4>
+                <button>Follow</button>
+            </div>
+
+        </div>
+
+        <div class="friend">
+
+            <img src="https://i.pravatar.cc/45?img=30">
+
+            <div>
+                <h4>David</h4>
+                <button>Follow</button>
+            </div>
+
+        </div>
+
+        <div class="friend">
+
+            <img src="https://i.pravatar.cc/45?img=40">
+
+            <div>
+                <h4>Olivia</h4>
+                <button>Follow</button>
+            </div>
+
+        </div>
+
+    </aside>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
